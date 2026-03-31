@@ -6,7 +6,7 @@ const multer = require("multer");
 const pdfParse = require("pdf-parse");
 console.log("pdfParse type:", typeof pdfParse);
 console.log("pdfParse value:", pdfParse);
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;;
 
 dotenv.config();
 const upload = multer({ storage: multer.memoryStorage(), limits: { fileSize: 5 * 1024 * 1024 }});
