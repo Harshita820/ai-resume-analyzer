@@ -26,7 +26,7 @@ function App() {
     }
 
     try {
-      const request = await axios.post("http://localhost:5000/analyze", 
+      const request = await axios.post("https://ai-resume-analyzer-kbfe.onrender.com/analyze", 
         formdata,
         {
           headers: {
@@ -44,7 +44,7 @@ function App() {
   }
 
   async function testAPI() {
-    const res = await axios.get("http://localhost:5000");
+    const res = await axios.get("https://ai-resume-analyzer-kbfe.onrender.com");
     console.log(res.data);
   }
 
