@@ -23,9 +23,10 @@ const groq = new Groq({
 //main AI route
 
 console.log("---- NEW REQUEST ----");
-console.log("BODY:", req.body);
-console.log("FILE:", req.file);
+
 app.post("/analyze", upload.single("resume"), async (req, res) => {
+  console.log("BODY:", req.body);
+  console.log("FILE:", req.file);
   try {
     let resumeText = req.body.resumeText;
     const { promptType, customPrompt} = req.body;
